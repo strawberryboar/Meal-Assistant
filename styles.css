@@ -1,0 +1,21 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+.title, .subtitle {
+    text-align: center;
+    color: black;
+}
+
+.container {
+    background-color: #fbe99f;
+}
+
+
+p {
+    /*giving space between text and input*/
+    margin-right: 10px;
+    margin-left: 10px;
+}

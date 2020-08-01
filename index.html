@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Nanum+Gothic&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="javascript" href="meal-script.js">
+    <link rel="javascript" href="drink-script.js">
+    <link rel="stylesheet" href="styles.css">
+    <title>Meal Assistant</title>
+</head>
+<body>
+    <!--need tiles to stack-->
+    <div class="container is-fluid">
+        <h1 class="title">Meal Assistant</h1>
+        <h2 class="subtitle">Welcome! I'm your Meal Assistant! To get started, provide some information about the recipes you want.</h2>
+        <div class="tile is-ancestor">
+            <div class="tile is-4">
+                    <!--Add options for no desired ingredients-->
+                    <p>What are your desired ingredients?</p>
+                    <input class="input" type="text" placeholder="Ingredients">
+                </div>
+                <div class="tile is-4">
+                    <!--make sure you can do both ingredients and title-->
+                    <p>Is there a title of the dish you're looking for?</p>
+                    <input class="input" type="text" placeholder="Name a dish!">
+                </div>
+                <div class="tile is-4">
+                    <!--true or false. if true, display next set of questions relating to drink-->
+                    <p>Would you like a drink with your meal?</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
