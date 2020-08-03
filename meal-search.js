@@ -51,9 +51,11 @@ $(document).on('click','#MealSearchBtn',function(){
     var SearchSelect = $("#SearchSelect").val();
     if (SearchSelect === "Name") {
         var MealSearchInputVal = $("#MealSearchInput").val();
+        MealString = MealSearchInputVal;
         var url = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + MealSearchInputVal;
     } else if (SearchSelect === "MainIngredient") {
         var MealIngredientSearchInput = $("#MealIngredientSearchInput").val();
+        MealString = MealIngredientSearchInput;
         var url = "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + MealIngredientSearchInput;
     } 
     GenerateSearchResults(url)

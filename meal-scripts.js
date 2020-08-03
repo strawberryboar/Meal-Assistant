@@ -1,3 +1,5 @@
+var MealString;
+
 // Generate Search Results Using a URL
 function GenerateSearchResults(APIurl) {
     var searchresults = $("#MealSearchresults")
@@ -9,12 +11,12 @@ function GenerateSearchResults(APIurl) {
         url: APIurl,
         method: 'GET'
     }).then(function(response) {
+        console.log(response)
         if (response.meals === null) {
-            var MealSearchInputVal = $("#MealSearchInput").val();
+            
             ErrorMsg.css("color", "red");
-            ErrorMsg.text('Error: No search results found for ' + MealSearchInputVal + '. Please try again.')
+            ErrorMsg.text('Error: No search results found for ' + MealString + '. Please try again.')
         } else {
-            console.log(response)
             for (i = 0; i < response.meals.length; i++) {
                 var MealObject = response.meals[i];
                 var ResultDiv = $("<div>");
