@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="SearchForm">
+        Search By:
+        <select id="SearchSelect">
+            <option value="Name">Name</option>
+            <option value="MainIngredient">Main Ingredient</option>
+        </select><br><br>
+        <input type="text" id="MealSearchInput" placeholder="Search By Name">
+        <input type="text" id="MealIngredientSearchInput" placeholder="Search By Ingredient" class="hidden">
+        <button id="MealSearchBtn">Search</button><br><br>
+        <div id="MealErrorMsg"></div>
+        <div id="MealSearchresults"></div>
+    </div>
+    <div id="MealDetails" class="hidden">
+        <button class="ReturnMealResults">Return to search results</button><br><br>
+        <h1 id="MealTitle"></h1>
+        <img id="MealIMG">
+        <h2 id="MealArea"></h2>
+        <h2 id="MealCategory"></h2>
+        Ingredients:
+        <ul id="IngredientList"></ul>
+        <p id="MealInstructions"></p>
+        <ul id="MealMeasurements"></ul>
+        <p id="MealSource"></p>
+        <p id="MealVideo"></p>
+    </div>
+</body>
+<script src="meal-scripts.js"></script>
+<script src="meal-search.js"></script>
+</html>
