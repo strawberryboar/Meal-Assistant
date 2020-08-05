@@ -3,6 +3,7 @@ const MealSearchresults = document.getElementById("MealSearchresults");
 const MealDetails = document.getElementById("MealDetails");
 const ReturnMealCatalog = document.getElementById("ReturnMealCatalog");
 
+// Generates all meal categories
 function GenerateMealCatagories() {
     const APIurl = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
@@ -27,6 +28,7 @@ function GenerateMealCatagories() {
     });
 }
 
+// Generates all meal categories
 function GenerateMealAreas() {
     var APIurl = "https://www.themealdb.com/api/json/v1/1/list.php?a=list";
 
@@ -46,6 +48,7 @@ function GenerateMealAreas() {
     });
 }
 
+// Generates list of all meal ingredeints
 function GenerateMealIngredients() {
     var APIurl = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
 
@@ -64,13 +67,14 @@ function GenerateMealIngredients() {
     });
 }
 
-
+// Waits for HTML document to be ready before loading defaults
 $(document).ready(function(){
     GenerateMealCatagories();
     GenerateMealAreas();
     GenerateMealIngredients();
 });
 
+// Meal category div click event listener
 $(document).on('click','.MealCategory',function(){
     MealCatalog.classList.add("hidden");
     ReturnMealCatalog.classList.remove("hidden");
@@ -80,6 +84,7 @@ $(document).on('click','.MealCategory',function(){
     GenerateSearchResults(APIurl)
 });
 
+// Meal area div click event listener
 $(document).on('click','.MealArea',function(){
     MealCatalog.classList.add("hidden");
     ReturnMealCatalog.classList.remove("hidden");
@@ -89,6 +94,7 @@ $(document).on('click','.MealArea',function(){
     GenerateSearchResults(APIurl);
 });
 
+// Random meal button click event listener
 $(document).on('click','#MealRandomGenerator',function(){
     MealCatalog.classList.add("hidden");
     ReturnMealCatalog.classList.remove("hidden");
@@ -97,6 +103,7 @@ $(document).on('click','#MealRandomGenerator',function(){
     GenerateSearchResults(APIurl);
 });
 
+// Returns to meal area/category/random results listener
 $(document).on('click','.ReturnMealResults',function(){
     MealDetails.classList.add("hidden");
     ReturnMealCatalog.classList.remove("hidden");
@@ -117,7 +124,7 @@ $(document).on('click','.MealSearchResult',function(){
     MealDetails.classList.remove("hidden");
 });
 
-// Shows meal Results
+// Returns to meal catalog
 $(document).on('click','#ReturnMealCatalog',function(){
     MealDetails.classList.add("hidden");
     MealSearchresults.classList.add("hidden");

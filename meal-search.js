@@ -80,6 +80,7 @@ $(document).on('click','.ReturnMealResults',function(){
     $("#IngredientList").html("");
 });
 
+// Search Select Listener that changes which search input displays on screen.
 $( "#SearchSelect" ).change(function() {
     var SearchSelect = $("#SearchSelect").val();
     if (SearchSelect === "Name") {
