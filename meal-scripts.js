@@ -1,4 +1,6 @@
 var MealString;
+const SaveMealBtn = document.getElementById("SaveMealBtn")
+const RemoveMealBtn = document.getElementById("RemoveMealBtn")
 
 // Generate Search Results Using a URL
 function GenerateSearchResults(APIurl) {
@@ -80,6 +82,58 @@ function GenerateMealDetails(APIurl) {
         var video = $("<a>").text("YouTube Video");
         video.attr("href", MealObject.strYoutube);
         $("#MealVideo").append(video);
+        ////////// New Additions as of 8/6/2020 ////////// 
+        var MealID = MealObject.idMeal;
+        $("#SaveMealBtn").val(MealID);
+        $("#RemoveMealBtn").val(MealID);
+        var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
+        if (SavedMeals === null) {
+            RemoveMealBtn.classList.add("hidden");
+            SaveMealBtn.classList.remove("hidden");
+        } else if (SavedMeals.includes(MealID)) {
+            SaveMealBtn.classList.add("hidden");
+            RemoveMealBtn.classList.remove("hidden");
+        } else {
+            RemoveMealBtn.classList.add("hidden");
+            SaveMealBtn.classList.remove("hidden");
+        }
+        ////////////////////////////////////////////////////
     });
-
 }
+
+////////// New Additions as of 8/6/2020 ////////// 
+// Save Meal Button Event Click Listener
+$(document).on('click','#SaveMealBtn',function(){
+    var MealID = $(this).val();
+    var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
+    if (SavedMeals === null) {
+        var NewMealArray = new Array();
+        NewMealArray.push(MealID);
+        localStorage.setItem("SavedMeals", JSON.stringify(NewMealArray));
+    } else {
+        SavedMeals.push(MealID);
+        localStorage.setItem("SavedMeals", JSON.stringify(SavedMeals));
+    }
+    console.log(localStorage.getItem("SavedMeals"));
+    var APIurl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + MealID;
+    $("#MealSource").html("");
+    $("#MealVideo").html("");
+    $("#IngredientList").html("");
+    GenerateMealDetails(APIurl)
+});
+
+// Remove Meal Button From Saved Click Listener
+$(document).on('click','#RemoveMealBtn',function(){
+    var MealID = $(this).val();
+    var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
+    var index = SavedMeals.indexOf(MealID);
+    SavedMeals.splice(index, 1);
+    localStorage.setItem("SavedMeals", JSON.stringify(SavedMeals));
+    var APIurl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + MealID;
+    $("#MealSource").html("");
+    $("#MealVideo").html("");
+    $("#IngredientList").html("");
+    GenerateMealDetails(APIurl);
+    console.log(localStorage.getItem("SavedMeals"));
+});
+////////////////////////////////////////////////////

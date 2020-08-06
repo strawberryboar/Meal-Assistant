@@ -9,18 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="SearchForm">
-        Search By:
-        <select id="SearchSelect">
-            <option value="Name">Name</option>
-            <option value="MainIngredient">Main Ingredient</option>
-        </select><br><br>
-        <input type="text" id="MealSearchInput" placeholder="Search By Name">
-        <input type="text" id="MealIngredientSearchInput" placeholder="Search By Ingredient" class="hidden">
-        <button id="MealSearchBtn">Search</button><br><br>
-        <div id="MealErrorMsg"></div>
-        <div id="MealSearchresults"></div>
-    </div>
+    <div id="MealSearchresults"></div>
+    <div id="MealErrorMsg"></div>
     <div id="MealDetails" class="hidden">
         <button class="ReturnMealResults">Return to search results</button><br><br>
         <h1 id="MealTitle"></h1>
@@ -38,5 +28,5 @@
     </div>
 </body>
 <script src="meal-scripts.js"></script>
-<script src="meal-search.js"></script>
+<script src="meal-saved.js"></script>
 </html>
