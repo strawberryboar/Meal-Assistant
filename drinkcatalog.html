@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drinkstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="drinkCatalog">
+        <div class="drinkCategories"></div>
+        <div class="drinkAreas"></div>
+        <div class="drinkRandomGenerator">
+            <h2>Generate a Random Drink:</h2>
+            <button id="drinkRandomGenerator">Generate a Random Drink</button>
+        </div>
+        <div class="drinkIngredientList"></div>
+    </div>
+    <button id="returnDrinkCatalog" class="hidden">Return to Catalog</button>
+    <div id="drinkSearchResults"></div>
+    <div id="drinkDetails" class="hidden">
+        <button class="returnDrinkResults">Return to Search Results</button>
+        <br>
+        <h1 id="drinkTitle"></h1>
+        <img src="" alt="" id="drinkIMG">
+        Ingredients:
+        <ul id="drinkIngredientList"></ul>
+        <p id="drinkInstructions"></p>
+        <ul id="drinkMeasurements"></ul>
+    </div>
+    <script src="drinkscripts.js"></script>
+    <script src="drinkcatalog.js"></script>
+</body>
+</html>
