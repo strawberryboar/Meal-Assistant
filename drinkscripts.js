@@ -48,6 +48,8 @@ function generateDrinkDetails(APIurl) {
         $("#drinkIMG").attr("src", drinkObject.strDrinkThumb);
         $("#drinkIMG").width(300);
         $("#drinkCategory").text("Category: " + drinkObject.strCategory);
+        $("#drinkGlass").text(drinkObject.strGlass);
+        $("#drinkAlcoholic").text(drinkObject.strAlcoholic);
         let drinkIngredientsArray = [drinkObject.strIngredient1, drinkObject.strIngredient2, drinkObject.strIngredient3, drinkObject.strIngredient4, drinkObject.strIngredient5, drinkObject.strIngredient6, drinkObject.strIngredient7, drinkObject.strIngredient8, drinkObject.strIngredient9, drinkObject.strIngredient10, drinkObject.strIngredient11, drinkObject.strIngredient12, drinkObject.strIngredient13, drinkObject.strIngredient14, drinkObject.strIngredient15];
         let drinkMeasurementsArray = [drinkObject.strMeasure1, drinkObject.strMeasure2, drinkObject.strMeasure3, drinkObject.strMeasure4, drinkObject.strMeasure5, drinkObject.strMeasure6, drinkObject.strMeasure7, drinkObject.strMeasure8, drinkObject.strMeasure9, drinkObject.strMeasure10, drinkObject.strMeasure11, drinkObject.strMeasure12, drinkObject.strMeasure13, drinkObject.strMeasure14, drinkObject.strMeasure15];
         for (i = 0; i < drinkIngredientsArray.length; i ++) {
