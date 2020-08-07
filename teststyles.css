@@ -1,0 +1,87 @@
+body {
+  font-family: 'Mulish', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fea49f;
+}
+/*Need to put everything in container and center page*/
+
+.hidden {
+    display: none;
+}
+
+.navbar, .navbar-item, #logo {
+  background-color: #101357;
+  color: white;
+}
+
+.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, .MealCategory, .MealArea {
+    border-style: solid;
+    border-width: 3px;
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    color: #cfeeff;
+}
+
+.MealArea {
+  padding: 0;
+}
+
+.MealArea h2 {
+  padding: 10px;
+}
+
+.MealCategory, .Areas-Buttons, button {
+  background-color: #101357;
+}
+
+.subtitle {
+  color: #cfeeff;
+}
+
+.title {
+  color: #101357;
+  margin: 10px;
+}
+
+
+.MealSearchResult:hover, .MealCategory:hover, .MealArea:hover, .subtitle:hover {
+    background-color: #00a0a0;
+    color: white;
+}
+
+
+
+
+
+.autocomplete-suggestions { 
+    border: 1px solid #999; 
+    background: #FFF; 
+    overflow: auto; 
+  }
+  
+  .autocomplete-suggestion { 
+    padding: 2px 5px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+  }
+  
+  .autocomplete-selected { 
+    background: #F0F0F0; 
+  }
+  
+  .autocomplete-suggestions strong { 
+    font-weight: normal; 
+    color: #3399FF; 
+  }
+  
+  .autocomplete-group { 
+    padding: 2px 5px; 
+  }
+  
+  .autocomplete-group strong { 
+    display: block; 
+    border-bottom: 1px solid #000; 
+  }
