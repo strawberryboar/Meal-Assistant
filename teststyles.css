@@ -31,12 +31,27 @@ body {
 
 #MealDetails {
   text-align: center;
+  background-color: #00a0a0;
 }
 
 #MealIMG {
   border-style: solid;
   border-color: #101357;
   border-width: 3px;
+}
+
+#MealInstructions {
+  margin: 20px;
+  padding: 15px;
+  border-style: solid;
+  border-color: #101357;
+}
+
+li, #MealInstructions {
+  color: #101357;
+  background-color: white;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .MealArea {
@@ -47,8 +62,6 @@ body {
   padding: 10px;
 }
 
-/*Affects entire page, need just sections*/
-
 
 .MealCategory, .Areas-Buttons, button, .MealSearchResult {
   background-color: #101357;
@@ -58,13 +71,13 @@ body {
   color: #cfeeff;
 }
 
+.MealSearchResult h1 {
+  font-size: 20px;
+}
+
 .title {
   color: #101357;
   margin: 10px;
-}
-
-li, #MealInstructions {
-  color: #101357;
 }
 
 
