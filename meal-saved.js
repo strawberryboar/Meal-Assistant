@@ -20,6 +20,7 @@ function LoadSavedMeals() {
                 var MealObject = response.meals[0];
                 var ResultDiv = $("<div>");
                 ResultDiv.attr("id", MealObject.idMeal);
+                //note
                 ResultDiv.attr("class", "MealSearchResult");
                 var title = $("<h1>").text(MealObject.strMeal);
                 title.attr("id", MealObject.idMeal);
