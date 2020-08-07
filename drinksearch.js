@@ -58,7 +58,7 @@ $(document).on('click','#drinkSearchBtn',function(){
 });
 
 // Drink Search Results click Event
-$(document).on('click','#drinkSearchResults',function(){
+$(document).on('click','.drinkSearchResult',function(){
     var id = $(this).attr('id');
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + id
     searchForm.classList.add("hidden");
