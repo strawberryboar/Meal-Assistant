@@ -14,52 +14,51 @@
 
     <!--Navbar Start-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <!--put icon in this img-->
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            <h1 class="title is-4" id="logo" >Meal Assistant</h1>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <!--put icon in this img-->
+          <img src="sources/icon.png" width="30" height="60">
+          <h1 class="title is-4" id="logo" >Meal Assistant</h1>
+        </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            Home
           </a>
-      
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+          <a class="navbar-item" href="meal-catalog.html">
+            Browse Meal Catalog
           </a>
-        </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="#">
-              Home
-            </a>
-            <a class="navbar-item" href="catalog.html">
-              Browse Catalog
-            </a>
-      
-            <a class="navbar-item" href="meal-search.html">
-                Meal Search
-            </a>
+          <a class="navbar-item" href="drink-catalog.html">
+            Browse Drink Catalog
+          </a>
+    
+          <a class="navbar-item" href="meal-search.html">
+              Meal Search
+          </a>
 
-            <a class="navbar-item" href="#">
-                Drink Search
-            </a>
+          <a class="navbar-item" href="drink-search.html">
+              Drink Search
+          </a>
 
-            <a class="navbar-item" href="saved.html">
-              Saved Items
-            </a>
-
-              </div>
-            </div>
-          </div>
-      
-
-
+          <a class="navbar-item" href="saved.html">
+            Saved Items
+          </a>
             </div>
           </div>
         </div>
-    </nav>
-    <!--Navbar End-->
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <h1>Helo world!</h1>
 
     <div id="SearchForm">
         Search By:
@@ -92,5 +91,5 @@
     </div>
 </body>
 <script src="scripts/meal-scripts.js"></script>
-<script src="scripts/meal-catalog.js"></script>
+<script src="scripts/meal-search.js"></script>
 </html>

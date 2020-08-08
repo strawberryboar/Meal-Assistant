@@ -11,12 +11,13 @@
     <title>Meal Assistant</title>
 </head>
 <body>
+
     <!--Navbar Start-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
             <!--put icon in this img-->
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <img src="sources/icon.png" width="30" height="60">
             <h1 class="title is-4" id="logo" >Meal Assistant</h1>
           </a>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -27,18 +28,22 @@
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="index.html">
               Home
             </a>
-            <a class="navbar-item" href="catalog.html">
-              Browse Catalog
+            <a class="navbar-item" href="meal-catalog.html">
+              Browse Meal Catalog
+            </a>
+
+            <a class="navbar-item" href="drink-catalog.html">
+              Browse Drink Catalog
             </a>
       
             <a class="navbar-item" href="meal-search.html">
                 Meal Search
             </a>
 
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="drink-search.html">
                 Drink Search
             </a>
 
@@ -54,35 +59,41 @@
     </nav>
 
     <div class="container">
-        <div id="MealCatalog">
-            <div class="MealCategories title"></div>
-            <div class="MealAreas title"></div>
-            <div class="MealRandomGenerator">
-                <h2 class="title">Generate a random meal:</h2>
-                <button class="subtitle" id="MealRandomGenerator">Generate Random Meal</button>
-            </div>
-            <div class="MealIngredientList title"></div>
-        </div>
-        <button id="ReturnMealCatalog" class="hidden subtitle">Return To Catalog</button>
-        <div id="MealSearchresults"></div>
-        <div id="MealDetails" class="hidden">
-            <button class="ReturnMealResults subtitle">Return to search results</button><br><br>
-            <h1 class="title" id="MealTitle"></h1>
-            <img id="MealIMG">
-            <h2 id="MealArea"></h2>
-            <h2 id="MealCategory"></h2>
-            Ingredients:
-            <ul id="IngredientList"></ul>
-            <p id="MealInstructions"></p>
-            <ul id="MealMeasurements"></ul>
-            <p id="MealSource"></p>
-            <p id="MealVideo"></p>
-            <button id="SaveMealBtn" class="SaveMealBtn">Save Meal</button>
-            <button id="RemoveMealBtn" class="RemoveMealBtn">Remove Meal From Saved Meals</button>
-        </div>
+
+        <div id="drinkCatalog">
+            <div class="drinkCategories"></div>
+      <div class="drinkGlasses"></div>
+      <div class="drinkAlcoholic"></div>
+      <div class="drinkRandomGenerator">
+          <h2>Generate a Random Drink:</h2>
+          <button id="drinkRandomGenerator">Generate a Random Drink</button>
+      </div>
+      <div class="drinkIngredientList"></div>
+  </div>
+  <button id="returnDrinkCatalog" class="hidden">Return to Catalog</button>
+  <div id="drinkSearchResults"></div>
+  <div id="drinkDetails" class="hidden">
+      <button class="returnDrinkResults">Return to Search Results</button>
+      <br>
+      <h1 id="drinkName"></h1>
+      <img id="drinkIMG">
+      <h2 id="drinkCategory"></h2>
+      <h3 id="drinkGlass"></h3>
+      <h4 id="drinkAlcoholic"></h4>
+      Ingredients:
+      <ul id="drinkIngredientList"></ul>
+      <p id="drinkInstructions"></p>
+      <ul id="drinkMeasurements"></ul>
+      <button id="saveDrinkBtn" class="saveDrinkBtn">Save Drink</button>
+      <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink From Saved Drinks</button>
+  </div>
     </div>
+
+    
     
 </body>
 <script src="scripts/meal-scripts.js"></script>
 <script src="scripts/meal-catalog.js"></script>
+<script src="scripts/drink-scripts.js"></script>
+<script src="scripts/drink-catalog.js"></script>
 </html>

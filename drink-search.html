@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="sources/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Nanum+Gothic&family=Nunito:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.min.js"></script>
+        <title>Meal Assistant</title>
+    </head>
+<body>
+
+    <!--Navbar Start-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <!--put icon in this img-->
+            <img src="sources/icon.png" width="30" height="60">
+            <h1 class="title is-4" id="logo" >Meal Assistant</h1>
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+              Home
+            </a>
+            <a class="navbar-item" href="meal-catalog.html">
+              Browse Meal Catalog
+            </a>
+
+            <a class="navbar-item" href="drink-catalog.html">
+              Browse Drink Catalog
+            </a>
+      
+            <a class="navbar-item" href="meal-search.html">
+                Meal Search
+            </a>
+
+            <a class="navbar-item" href="drink-search.html">
+                Drink Search
+            </a>
+
+            <a class="navbar-item" href="saved.html">
+              Saved Items
+            </a>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="drinkSearch">
+            Search By:
+            <select id="searchSelect">
+                <option value="name">Name</option>
+                <option value="mainDrinkIngredient">Main Ingredient</option>
+            </select>
+            <br>
+            <input type="text" id="drinkInput" placeholder="Search By Name">
+            <input type="text" id="drinkIngredientInput" placeholder="Search By Ingredient" class="hidden">
+            <button id="drinkSearchBtn">Search</button>
+            <br>
+            <div id="drinkError"></div>
+            <div id="drinkSearchResults"></div>
+        </div>
+        <div id="drinkDetails" class="hidden">
+            <button class="returnDrinkResults">Return to Search Results</button>
+            <br>
+            <h1 id="drinkName"></h1>
+            <img id="drinkIMG">
+            <h2 id="drinkCategory"></h2>
+            <h3 id="drinkGlass"></h3>
+            <h4 id="drinkAlcoholic"></h4>
+            Ingredients:
+            <ul id="drinkIngredientList"></ul>
+            <p id="drinkInstructions"></p>
+            <ul id="drinkMeasurements"></ul>
+            <button id="saveDrinkBtn" class="saveDrinkBtn">Save Drink</button>
+            <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink From Saved Drinks</button>
+        </div>
+    </div>
+    
+</body>
+
+<script src="scripts/drink-scripts.js"></script>
+<script src="scripts/drink-search.js"></script>
+</html>
