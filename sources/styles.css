@@ -1,0 +1,127 @@
+body {
+  font-family: 'Mulish', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fea49f;
+}
+/*Need to put everything in container and center page*/
+.container {
+  width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar, .navbar-item, #logo {
+  background-color: #101357;
+  color: white;
+}
+
+#IngredientList{
+  border-style: solid;
+  border-color: #101357;
+  width: 100%;
+}
+
+.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, .MealCategory, .MealArea, #MealDetails {
+    border-style: solid;
+    border-width: 3px;
+    width: 100%;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 15px;
+    color: #cfeeff;
+    background-color: white;
+}
+
+#MealDetails {
+  text-align: center;
+  background-color: #00a0a0;
+}
+
+#MealIMG {
+  border-style: solid;
+  border-color: #101357;
+  border-width: 3px;
+}
+
+#MealInstructions {
+  margin: 20px;
+  padding: 15px;
+  border-style: solid;
+  border-color: #101357;
+}
+
+li, #MealInstructions {
+  color: #101357;
+  background-color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.MealArea {
+  padding: 0;
+}
+
+.MealArea h2 {
+  padding: 10px;
+}
+
+
+.MealCategory, .Areas-Buttons, button, .MealSearchResult {
+  background-color: #101357;
+}
+
+.subtitle {
+  color: #cfeeff;
+}
+
+.MealSearchResult h1 {
+  font-size: 20px;
+}
+
+.title {
+  color: #101357;
+  margin: 10px;
+}
+
+
+.MealSearchResult:hover, .MealCategory:hover, .MealArea:hover, .subtitle:hover {
+    background-color: #00a0a0;
+    color: white;
+}
+
+
+
+
+
+.autocomplete-suggestions { 
+    border: 1px solid #999; 
+    background: #FFF; 
+    overflow: auto; 
+  }
+  
+  .autocomplete-suggestion { 
+    padding: 2px 5px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+  }
+  
+  .autocomplete-selected { 
+    background: #F0F0F0; 
+  }
+  
+  .autocomplete-suggestions strong { 
+    font-weight: normal; 
+    color: #3399FF; 
+  }
+  
+  .autocomplete-group { 
+    padding: 2px 5px; 
+  }
+  
+  .autocomplete-group strong { 
+    display: block; 
+    border-bottom: 1px solid #000; 
+  }
