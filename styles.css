@@ -3,6 +3,13 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
   font-family: 'Nunito', sans-serif;
   background-color: #fea49f;
+  overflow: auto;
+  height: 100%;
+}
+
+html {
+  overflow: auto;
+  height: 100%;
 }
 
 .container {
@@ -82,7 +89,7 @@ p {
 }
 /*Meal Search End*/
 
-.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, #MealDetails {
+.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, #MealDetails,/**/ .drinkSearchResult, .drinkCategories, .drinkAreas, .drinkRandomGenerator, .drinkIngredientList, .drinkCategory, .drinkGlasses, .drinkGlass, .drinkAlcohol, .drinkAlcoholic {
     border-style: solid;
     border-width: 3px;
     width: 100%;
@@ -156,7 +163,7 @@ a {
 }
 
 a:hover {
-  color: #101357;
+  color: #fea49f;
 }
 
 #ReturnMealCatalog, .ReturnMealResults {
@@ -164,6 +171,7 @@ a:hover {
   border-style: solid;
   border-color: #101357;
   border-radius: 3px;
+  height: 30px;
 }
 
 .MealSearchResult img {
@@ -181,6 +189,7 @@ a:hover {
   border-color: white;
   border-radius: 10px;
 }
+
 
 .MealArea {
   padding: 0;
@@ -209,12 +218,13 @@ a:hover {
 }
 
 
-.MealSearchResult:hover, .MealCategory:hover, .Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, #MealSearchBtn:hover, .ReturnMealResults:hover, .getStartedBtn:hover {
+.MealSearchResult:hover, .MealCategory:hover, .Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, #MealSearchBtn:hover, .ReturnMealResults:hover, .getStartedBtn:hover, /**/.drinkSearchResult:hover, .drinkCategory:hover, .drinkGlass:hover, .drinkAlcohol:hover {
     background-color: #00a0a0;
     color: white;
 }
 
 footer {
+  margin: auto;
   position: fixed;
     text-align: center;
     width: 100%;
@@ -256,3 +266,7 @@ footer {
     display: block; 
     border-bottom: 1px solid #000; 
   }
+
+  /*Drinks Start*/
+  
+  /*Drinks End*/
