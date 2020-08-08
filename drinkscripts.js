@@ -1,4 +1,4 @@
-var drinkString = $("input");
+var drinkString;
 const saveDrinkBtn = document.getElementById("saveDrinkBtn")
 const removeDrinkBtn = document.getElementById("removeDrinkBtn")
 

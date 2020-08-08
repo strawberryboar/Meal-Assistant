@@ -50,9 +50,11 @@ $(document).on('click','#drinkSearchBtn',function(){
     var searchSelect = $("#searchSelect").val();
     if (searchSelect === "name") {
         var drinkSearchInputVal = $("#drinkInput").val();
+        drinkString = drinkSearchInputVal;
         var url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkSearchInputVal;
     } else if (searchSelect === "mainDrinkIngredient") {
         var drinkIngredientSearchInput = $("#drinkIngredientInput").val();
+        drinkString = drinkIngredientSearchInput;
         var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drinkIngredientSearchInput;
     } 
     generateSearchResults(url)
