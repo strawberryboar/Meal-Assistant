@@ -3,6 +3,7 @@ const drinkDetails = document.getElementById("drinkDetails");
 let drinkSearchArray = new Array();
 let drinkSearchIngredientArray = new Array();
 
+//Function to search for drinks by name or main ingredient with autocomplete feature
 $(document).ready(function(){
     function loadDrinkSuggestions() {
         const ABC = "abcdefghijklmnopqrstuvwxyz";
@@ -44,7 +45,7 @@ $(document).ready(function(){
     loadDrinkSuggestions()
 });
 
-// Drink Search Button
+// Drink Search Button event listener to search for drink by name or main ingredient
 $(document).on('click','#drinkSearchBtn',function(){
     var searchSelect = $("#searchSelect").val();
     if (searchSelect === "name") {
@@ -57,7 +58,7 @@ $(document).on('click','#drinkSearchBtn',function(){
     generateSearchResults(url)
 });
 
-// Drink Search Results click Event
+// Drink Search Results click Event to show drink details
 $(document).on('click','.drinkSearchResult',function(){
     var id = $(this).attr('id');
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + id
@@ -66,7 +67,7 @@ $(document).on('click','.drinkSearchResult',function(){
     drinkDetails.classList.remove("hidden");
 });
 
-// Shows drink Results
+// Return to search results
 $(document).on('click','.returnDrinkResults',function(){
     searchForm.classList.remove("hidden");
     drinkDetails.classList.add("hidden");

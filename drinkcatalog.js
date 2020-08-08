@@ -3,6 +3,7 @@ const drSearchResults = document.getElementById("drinkSearchResults");
 const drDetails = document.getElementById("drinkDetails");
 const drReturn  = document.getElementById("returnDrinkCatalog");
 
+//funtions to generate lists by category, glass type, alcoholic/non-alcoholic, and a list of ingredients.
 function generateDrinkCategories(){
     var drURL = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
 
@@ -77,7 +78,7 @@ function generateDrinkIngredients() {
         }
     });
 }
-
+//function calls to display catalog upon page load
 $(document).ready(function(){
     generateDrinkCategories();
     generateDrinkGlasses();
@@ -85,7 +86,7 @@ $(document).ready(function(){
     generateDrinkIngredients();
     
 });
-
+//event listeners to show list of drinks based on selection within categories
 $(document).on("click", ".drinkCategory", function(){
     drCatalog.classList.add("hidden");
     drReturn.classList.remove("hidden");
@@ -103,7 +104,7 @@ $(document).on("click", ".drinkGlass", function(){
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=" + drGlass;
     generateSearchResults(APIurl);
 });
-
+//event listener to select a random drink
 $(document).on('click', '#drinkRandomGenerator', function(){
     drCatalog.classList.add("hidden");
     drReturn.classList.remove("hidden");
@@ -111,7 +112,7 @@ $(document).on('click', '#drinkRandomGenerator', function(){
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
     generateSearchResults(APIurl);
 });
-
+//return to previous list from drink detail page
 $(document).on('click','.returnDrinkResults',function(){
     drDetails.classList.add("hidden");
     drReturn.classList.remove("hidden");
@@ -119,7 +120,7 @@ $(document).on('click','.returnDrinkResults',function(){
     $("#drinkIMG").attr("src", "");
     $("#drinkIngredientList").html("");
 });
-
+//show drink details
 $(document).on('click','.drinkSearchResult',function(){
     var id = $(this).attr('id');
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + id;
@@ -128,7 +129,7 @@ $(document).on('click','.drinkSearchResult',function(){
     generateDrinkDetails(APIurl);
     drDetails.classList.remove("hidden");
 });
-
+//return to catelog
 $(document).on('click','#returnDrinkCatalog',function(){
     drDetails.classList.add("hidden");
     drSearchResults.classList.add("hidden");

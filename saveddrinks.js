@@ -1,10 +1,11 @@
 const drinkSearchResults = document.getElementById("drinkSearchResults");
 const drinkDetails = document.getElementById("drinkDetails");
 
+//Function to retrieve any saved drinks from local storage
 function loadSavedDrinks () {
     let savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
 
-    if (savedDrinks === null) {
+    if (savedDrinks === null || savedDrinks === [] || savedDrinks === "") {
         $("#drinkErrorMsg").text ("You haven't added any drinks to your saved drink list. Start saving drinks to see the list.")
     } else {
         for (var i = 0; i < savedDrinks.length; i++) {
@@ -34,7 +35,7 @@ function loadSavedDrinks () {
 }
 
 loadSavedDrinks()
-
+//click event to show drink details
 $(document).on("click", ".drinkSearchResult", function(){
     let drId = $(this).attr("id");
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drId;
@@ -42,7 +43,7 @@ $(document).on("click", ".drinkSearchResult", function(){
     generateDrinkDetails(APIurl);
     drinkDetails.classList.remove("hidden");
 });
-
+//click event to show list of saved drinks upon clicking return to saved drinks button
 $(document).on("click", ".returnDrinkResults", function(){
     drinkSearchResults.classList.remove("hidden");
     drinkDetails.classList.add("hidden");

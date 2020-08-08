@@ -1,7 +1,8 @@
-var drinkString;
+var drinkString = $("input");
 const saveDrinkBtn = document.getElementById("saveDrinkBtn")
 const removeDrinkBtn = document.getElementById("removeDrinkBtn")
 
+//function to show results of a search
 function generateSearchResults(APIurl) {
     let drinkSearchResults = $("#drinkSearchResults");
     drinkSearchResults.html("");
@@ -38,7 +39,7 @@ function generateSearchResults(APIurl) {
         }
     });
 }
-
+//function to show drink details including picture, ingredients, measurements, and instructions
 function generateDrinkDetails(APIurl) {
     $.ajax({
         url: APIurl,
@@ -77,7 +78,7 @@ function generateDrinkDetails(APIurl) {
         }
     });
 }
-
+//Event listeners to add or remove drink to saved list.
 $(document).on("click", "#saveDrinkBtn", function(){
     var drinkID = $(this).val();
     var savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
