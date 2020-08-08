@@ -13,10 +13,11 @@ function generateSearchResults(APIurl) {
         url: APIurl,
         method: "GET"
     }).then(function(response){
-        if(response.drinks === null) {
+        if(response.drinks === null || response.drinks === undefined) {
             errorMsg.css("color", "red");
             errorMsg.text("Error: No search results found for " + drinkString + ". Please try again");
         }else{
+            console.log(response)
             for (k=0; k < response.drinks.length; k++) {
                 let drinkObject = response.drinks[k];
                 let resultsDiv = $("<div>");
@@ -25,7 +26,7 @@ function generateSearchResults(APIurl) {
                 let drinkTitle = $("<h1>").text(drinkObject.strDrink);
                 drinkTitle.attr("id", drinkObject.idDrink);
                 resultsDiv.append(drinkTitle);
-
+                
                 if (drinkObject.strCategory !== undefined) {
                     let drinkDesc = $("<p>").text("Category: " + drinkObject.strCategory);
                     resultsDiv.append(drinkDesc);
