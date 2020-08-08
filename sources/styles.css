@@ -3,10 +3,20 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
   font-family: 'Nunito', sans-serif;
   background-color: #fea49f;
+  overflow: auto;
+  height: 100%;
 }
-/*Need to put everything in container and center page*/
+
+html {
+  overflow: auto;
+  height: 100%;
+}
+
 .container {
+  margin: 0 auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hidden {
@@ -18,21 +28,97 @@ body {
   color: white;
 }
 
-#IngredientList{
+/*Main Page Start*/
+.mainPage {
+  background-color: white;
   border-style: solid;
   border-color: #101357;
-  width: 100%;
+  border-width: 3px;
+  margin: 20px;
 }
 
-.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, .MealCategory, .MealArea, #MealDetails {
+#mainTitle, p {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+p {
+  font-size: 20px;
+  color: #101357;
+}
+
+.getStartedBtn {
+  background-color: #101357;
+  color: white;
+    border-style: solid;
+    border-color: #101357;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px;
+}
+/*Main Page End*/
+
+.MealIngredientList li {
+  font-size: 24px;
+  color: #101357;
+  margin: 5px;
+}
+
+.MealRandomGenerator {
+  border-style: solid;
+  border-color: #101357;
+}
+
+
+.MealCategory, #MealRandomGenerator {
+  border-style: solid;
+  border-color: #101357;
+  border-radius: 10px;
+}
+/*Meal Search Start*/
+#MealSearchBtn, .ReturnMealResults, #SaveMealBtn {
+  background-color: #101357;
+  border-color: #101357;
+  border-radius: 3px;
+  color: white;
+}
+
+#SearchForm {
+  color: #101357;
+}
+/*Meal Search End*/
+
+.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, #MealDetails,/**/ .drinkSearchResult, .drinkCategories, .drinkAreas, .drinkRandomGenerator, .drinkIngredientList, .drinkCategory, .drinkGlasses, .drinkGlass, .drinkAlcohol, .drinkAlcoholic {
     border-style: solid;
     border-width: 3px;
     width: 100%;
     padding: 20px;
-    margin: 5px;
+    margin: 20px;
     margin-bottom: 15px;
-    color: #cfeeff;
     background-color: white;
+    color: white;
+}
+
+.Areas-Buttons {
+  color: white;
+  border-style: solid;
+  border-color: #101357;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 15px;
+
+}
+
+.MealCategory {
+  margin: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.MealCategory h2 {
+  color: white;
 }
 
 #MealDetails {
@@ -55,10 +141,55 @@ body {
 
 li, #MealInstructions {
   color: #101357;
+  font-size: 20px;
+}
+
+h2, u {
+  font-size: 30px;
+}
+
+
+#MealInstructions, #IngredientList {
+  color: #101357;
   background-color: white;
   margin-left: 10%;
   margin-right: 10%;
+  border-style: solid;
+  border-color: #101357;
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #fea49f;
+}
+
+#ReturnMealCatalog, .ReturnMealResults {
+  margin-top: 5px;
+  border-style: solid;
+  border-color: #101357;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.MealSearchResult img {
+  border-style: solid;
+  border-color: white;
+  border-radius: 3px;
+}
+
+.MealSearchResult {
+  width: 75%;
+  margin-left: 10%;
+  margin-right: 10;
+  text-align: center;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+}
+
 
 .MealArea {
   padding: 0;
@@ -78,26 +209,36 @@ li, #MealInstructions {
 }
 
 .MealSearchResult h1 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .title {
   color: #101357;
-  margin: 10px;
+  margin: 15px;
 }
 
 
-.MealSearchResult:hover, .MealCategory:hover, .MealArea:hover, .subtitle:hover {
+.MealSearchResult:hover, .MealCategory:hover, .Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, #MealSearchBtn:hover, .ReturnMealResults:hover, .getStartedBtn:hover, /**/.drinkSearchResult:hover, .drinkCategory:hover, .drinkGlass:hover, .drinkAlcohol:hover, #SaveMealBtn:hover {
     background-color: #00a0a0;
     color: white;
 }
 
+footer {
+  margin: auto;
+  position: fixed;
+    text-align: center;
+    width: 100%;
+    background-color:#101357;
+    color: white;
+    bottom: 0;
+    left: 0;
+}
 
 
 
 
 .autocomplete-suggestions { 
-    border: 1px solid #999; 
+    border: 2px solid #101357; 
     background: #FFF; 
     overflow: auto; 
   }
@@ -125,3 +266,7 @@ li, #MealInstructions {
     display: block; 
     border-bottom: 1px solid #000; 
   }
+
+  /*Drinks Start*/
+  
+  /*Drinks End*/
