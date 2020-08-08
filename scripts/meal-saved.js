@@ -5,7 +5,8 @@ const MealDetails = document.getElementById("MealDetails");
 function LoadSavedMeals() {
     var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
 
-    if (SavedMeals === null) {
+    // Updated IF statement to fix bug
+    if (SavedMeals === null || SavedMeals.length === 0) {
         $("#MealErrorMsg").text("You have not added any meals to your saved meal list yet! Start saving meals to see this list populate.")
     } else {
         for (var i = 0; i < SavedMeals.length; i++) {

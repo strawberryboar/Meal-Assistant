@@ -15,9 +15,10 @@
     <!--Navbar Start-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="#">
+          <!-- Added href link to index for icon and title on navbar -->
+            <a class="navbar-item" href="index.html">
             <!--put icon in this img-->
-            <img src="sources/icon.jpg" width="30" height="60">
+            <img id="IMGLogo" src="sources/icon.png" width="30" height="60">
             <h1 class="title is-4" id="logo" >Meal Assistant</h1>
           </a>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -47,9 +48,15 @@
                 Drink Search
             </a>
 
-            <a class="navbar-item" href="saved.html">
-              Saved Items
+            <!-- Added additional nav bars -->
+            <a class="navbar-item" href="saved-meals.html">
+              Saved Meals
             </a>
+
+            <a class="navbar-item" href="saved-drinks.html">
+                Saved Drinks
+              </a>
+              <!-- ///////////////////////// -->
               </div>
             </div>
           </div>
@@ -57,8 +64,30 @@
           </div>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="mainPage">
+            <h1 class="title" id="mainTitle">
+                Hello! I'm your meal assistant!
+            </h1>
+            <p>
+                I help you find recipes based on your desired ingredients, the name of the dish, the country it's from, and more!
+                <br>
+                I can also help you find cocktails and other drinks to go with your meal!
+            </p>
+            <!-- Added HREF link to the get started button -->
+            <button class="subtitle getStartedBtn" onclick="location.href='meal-search.html';">
+                Get Started
+            </button>
+            <!-- @Backend reccomended to center the button like others -->
+        </div>
+    </div>
+
     <footer>
       © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="">Charles Hall</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
   </footer>
 </body>
+<!-- Made all scripts async -->
+<!-- Added scripts nav -->
+<script async src="scripts/nav.js"></script>
 </html>

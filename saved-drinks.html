@@ -15,7 +15,8 @@
     <!--Navbar Start-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <!-- Added href link to index for icon and title on navbar -->
+        <a class="navbar-item" href="index.html">
           <!--put icon in this img-->
           <img id="IMGLogo" src="sources/icon.png" width="30" height="60">
           <h1 class="title is-4" id="logo" >Meal Assistant</h1>
@@ -47,9 +48,15 @@
               Drink Search
           </a>
 
-          <a class="navbar-item" href="saved.html">
-            Saved Items
+          <!-- Added additional nav bars -->
+          <a class="navbar-item" href="saved-meals.html">
+            Saved Meals
           </a>
+
+          <a class="navbar-item" href="saved-drinks.html">
+            Saved Drinks
+          </a>
+          <!-- ///////////////////////// -->
             </div>
           </div>
         </div>
@@ -57,43 +64,35 @@
         </div>
       </div>
   </nav>
-<div class="container searchCont">
-  <p id="searchTitle">What are you looking for? Search by name or ingredient.</p>
-    <br>
-    <div id="SearchForm">
-        Search By:
-        <select id="SearchSelect">
-            <option value="Name">Name</option>
-            <option value="MainIngredient">Main Ingredient</option>
-        </select><br><br>
-        <input type="text" id="MealSearchInput" placeholder="Search By Name">
-        <input type="text" id="MealIngredientSearchInput" placeholder="Search By Ingredient" class="hidden">
-        <button id="MealSearchBtn">Search</button><br><br>
-        <div id="MealErrorMsg"></div>
-        <div id="MealSearchresults"></div>
+    <div class="container">
+        <div id="drinkSearchResults"></div>
+        <div id="drinkErrorMsg"></div>
+        <div id="drinkDetails" class="hidden">
+            <button class="returnDrinkResults">Return to Search Results</button>
+            <br>
+            <h1 id="drinkName"></h1>
+            <img id="drinkIMG">
+            <h2 id="drinkCategory"></h2>
+            <h3 id="drinkGlass"></h3>
+            <h4 id="drinkAlcoholic"></h4>
+            <u>Ingredients:</u>
+            <ul id="drinkIngredientList"></ul>
+            <p id="drinkInstructions"></p>
+            <ul id="drinkMeasurements"></ul>
+            <!-- @Backend work on CSS style for these buttons, they look funny. -->
+            <button id="saveDrinkBtn" class="saveDrinkBtn">Save Drink</button>
+            <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink From Saved Drinks</button>
+        </div>
+
+
     </div>
-    <div id="MealDetails" class="hidden">
-        <button class="ReturnMealResults">Return to search results</button><br><br>
-        <h1 id="MealTitle"></h1>
-        <img id="MealIMG">
-        <h2 id="MealArea"></h2>
-        <h2 id="MealCategory"></h2>
-        Ingredients:
-        <ul id="IngredientList"></ul>
-        <p id="MealInstructions"></p>
-        <ul id="MealMeasurements"></ul>
-        <p id="MealSource"></p>
-        <p id="MealVideo"></p>
-        <!-- Newly added as of 08/06/2020 -->
-        <button id="SaveMealBtn" class="SaveMealBtn">Save Meal</button>
-        <button id="RemoveMealBtn" class="RemoveMealBtn">Remove Meal From Saved Meals</button>
-        <!-- //////////////////////////// -->
-    </div>
-  </div>
     <footer>
       © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="">Charles Hall</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
   </footer>
 </body>
-<script src="scripts/meal-scripts.js"></script>
-<script src="scripts/meal-search.js"></script>
+<!-- Made all scripts async -->
+<script async src="scripts/drink-scripts.js"></script>
+<script async src="scripts/drinks-saved.js"></script>
+<!-- Added scripts nav -->
+<script async src="scripts/nav.js"></script>
 </html>

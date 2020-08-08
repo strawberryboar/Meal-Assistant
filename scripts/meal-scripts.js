@@ -135,4 +135,3 @@ $(document).on('click','#RemoveMealBtn',function(){
     console.log(localStorage.getItem("SavedMeals"));
 });
 ////////////////////////////////////////////////////
-

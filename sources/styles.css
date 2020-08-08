@@ -2,7 +2,7 @@ body {
   font-family: 'Mulish', sans-serif;
   font-family: 'Nanum Gothic', sans-serif;
   font-family: 'Nunito', sans-serif;
-  background-color: #fea49f;
+  background-color: #ada1a1;
   overflow: auto;
   height: 100%;
 }
@@ -25,87 +25,120 @@ html {
 }
 
 .navbar, .navbar-item, #logo {
-  background-color: #101357;
+  background-color: #471012;
   color: white;
 }
 
-/*Main Page Start*/
-.mainPage {
-  background-color: white;
-  border-style: solid;
-  border-color: #101357;
-  border-width: 3px;
-  margin: 20px;
+.navbar-item:hover {
+  background-color: #501B1D;
+  color: white;
 }
 
-#mainTitle, p {
+#IMGLogo {
+  background-color: white;
+  border: solid;
+  border-radius: 20px;
+}
+
+/*Main Page Start*/
+.mainPage, .searchCont {
+  background-color: #e8e3e3;
+  border-style: solid;
+  border-color: #2E1114;
+  border-width: 3px;
+  margin: 15px;
+}
+
+#searchTitle {
   text-align: center;
-  margin: 20px;
-  padding: 20px;
+  font-size: 30px;
+  color: #2E1114;
+}
+
+#mainTitle, p{
+  text-align: center;
+  margin: 18px;
+  padding: 18px;
+}
+
+#SearchForm, #SearchSelect, #drinkSearch, #searchSelect {
+  text-align: center;
+  margin: 10px;
+  justify-content: center;
+  font-size: 20px;
+}
+
+input, #drinkInput, #MealSearchInput {
+  font-size: 18px;
+  margin: auto;
 }
 
 p {
   font-size: 20px;
-  color: #101357;
+  color: #2E1114;
 }
 
 .getStartedBtn {
-  background-color: #101357;
+  background-color: #501B1D;
   color: white;
     border-style: solid;
-    border-color: #101357;
+    border-color: #2E1114;
     border-radius: 10px;
-    width: 50%;
-    margin: 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
 }
 /*Main Page End*/
 
 .MealIngredientList li {
   font-size: 20px;
-  color: #101357;
+  color: #2E1114;
   margin: 5px;
 }
 
 .MealRandomGenerator {
   border-style: solid;
-  border-color: #101357;
+  border-color: #2E1114;
 }
 
 
 .MealCategory, #MealRandomGenerator, .drinkCategory, .drinkGlass, .drinkAlcohol, #drinkRandomGenerator {
   border-style: solid;
-  border-color: #101357;
+  border-color: #2E1114;
   border-radius: 10px;
+  border-width: 3px;
   color: white;
 }
 /*Meal Search Start*/
-#MealSearchBtn, .ReturnMealResults, #SaveMealBtn, #saveDrinkBtn {
-  background-color: #101357;
-  border-color: #101357;
+#MealSearchBtn, .ReturnMealResults, #SaveMealBtn, #saveDrinkBtn, #RemoveMealBtn, #removeDrinkBtn, #drinkSearchBtn {
+  background-color: #2E1114;
+  border-color: #2E1114;
   border-radius: 3px;
   color: white;
 }
 
-#SearchForm {
-  color: #101357;
+#SearchForm, #drinkSearch {
+  color: #501B1D;
 }
 /*Meal Search End*/
 
-.MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, #MealDetails,/**/ .drinkSearchResult, .drinkCategories, .drinkAreas, .drinkRandomGenerator, .drinkIngredientList, .drinkGlasses, .drinkAlcoholic, #drinkDetails {
+.searchCont, .MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, #MealDetails,/**/ .drinkSearchResult, .drinkCategories, .drinkAreas, .drinkRandomGenerator, .drinkIngredientList, .drinkGlasses, .drinkAlcoholic, #drinkDetails {
     border-style: solid;
     border-width: 3px;
+    border-color: #2E1114;
     width: 100%;
     padding: 20px;
     margin: 20px;
     margin-bottom: 15px;
-    background-color: white;
+    background-color: #e8e3e3;
     color: white;
 }
 
 .Areas-Buttons {
   color: white;
   border-style: solid;
-  border-color: #101357;
+  border-color: #2E1114;
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
@@ -125,12 +158,12 @@ p {
 
 #MealDetails, #drinkDetails {
   text-align: center;
-  background-color: #00a0a0;
+  background-color: #501B1D;
 }
 
 #MealIMG, #drinkIMG {
   border-style: solid;
-  border-color: #101357;
+  border-color: #2E1114;
   border-width: 3px;
 }
 
@@ -138,26 +171,26 @@ p {
   margin: 20px;
   padding: 15px;
   border-style: solid;
-  border-color: #101357;
+  border-color: #2E1114;
 }
 
 li, #MealInstructions {
-  color: #101357;
+  color: #2E1114;
   font-size: 20px;
 }
 
-h2, u {
+h2, u, #drinkSearchResults h1 {
   font-size: 30px;
 }
 
 
 #MealInstructions, #IngredientList, #drinkIngredientList, #drinkInstructions {
-  color: #101357;
-  background-color: white;
+  color: #2E1114;
+  background-color: #e8e3e3;
   margin-left: 10%;
   margin-right: 10%;
   border-style: solid;
-  border-color: #101357;
+  border-color: #2E1114;
 }
 
 a, #MealSearchresults p {
@@ -168,20 +201,21 @@ a:hover {
   color: #fea49f;
 }
 
-#ReturnMealCatalog, .ReturnMealResults, #returnDrinkCatalog, #MealRandomGenerator, .returnDrinkResults, #saveDrinkBtn, #SaveMealBtn {
+#ReturnMealCatalog, .ReturnMealResults, #returnDrinkCatalog, #MealRandomGenerator, .returnDrinkResults, #saveDrinkBtn, #SaveMealBtn, #RemoveMealBtn, #removeDrinkBtn, #MealSearchBtn, #drinkSearchBtn {
   margin-top: 5px;
   border-style: solid;
-  border-color: #101357;
-  border-radius: 3px;
+  border-color: #2E1114;
+  border-radius: 10px;
   overflow: auto;
   height: 30px;
   color: white;
   font-size: 1.25rem;
+  background-color: #2E1114;
 }
 
-.MealSearchResult img {
+.MealSearchResult img, .drinkSearchResult img {
   border-style: solid;
-  border-color: white;
+  border-color: #2E1114;
   border-radius: 3px;
 }
 
@@ -191,7 +225,7 @@ a:hover {
   margin-right: 10;
   text-align: center;
   border-style: solid;
-  border-color: white;
+  border-color: #2E1114;
   border-radius: 10px;
 }
 
@@ -206,25 +240,26 @@ a:hover {
 
 
 .MealCategory, .Areas-Buttons, button, .MealSearchResult, .drinkCategory, .drinkGlass, .drinkAlcohol, .drinkSearchResult {
-  background-color: #101357;
+  background-color: #501B1D;
 }
 
 .subtitle {
-  color: #cfeeff;
+  color: #e8e3e3;
 }
 
-.MealSearchResult h1, .drinkSearchResult h1 {
+.MealSearchResult h1, .drinkSearchResult h1, #drinkSearchResults p {
   font-size: 25px;
+  color: white;
 }
 
 .title {
-  color: #101357;
+  color: #501B1D;
   margin: 15px;
 }
 
 
-.MealSearchResult:hover, .MealCategory:hover, .Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, #MealSearchBtn:hover, .ReturnMealResults:hover, #ReturnMealCatalog:hover, #MealRandomGenerator:hover /**/.drinkSearchResult:hover, .drinkCategory:hover, .drinkGlass:hover, .drinkAlcohol:hover, #SaveMealBtn:hover, #drinkRandomGenerator:hover, .drinkSearchResult:hover, #returnDrinkCatalog:hover, .returnDrinkResults:hover, #saveDrinkBtn:hover {
-    background-color: #00a0a0;
+.navbar-item:hover, .MealSearchResult:hover, .MealCategory:hover, .Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, #MealSearchBtn:hover, .ReturnMealResults:hover, #ReturnMealCatalog:hover, #MealRandomGenerator:hover, #RemoveMealBtn:hover, .RemoveMealBtn:hover, #removeDrinkBtn:hover, .drinkSearchResult:hover, .drinkCategory:hover, .drinkGlass:hover, .drinkAlcohol:hover, #SaveMealBtn:hover, #drinkRandomGenerator:hover, .drinkSearchResult:hover, #returnDrinkCatalog:hover, .returnDrinkResults:hover, #saveDrinkBtn:hover, #drinkSearchBtn:hover {
+    background-color: #64485C;
     color: white;
 }
 
@@ -233,7 +268,7 @@ footer {
   position: fixed;
     text-align: center;
     width: 100%;
-    background-color:#101357;
+    background-color:#2E1114;
     color: white;
     bottom: 0;
     left: 0;
@@ -244,7 +279,7 @@ footer {
 
 
 .autocomplete-suggestions { 
-    border: 2px solid #101357; 
+    border: 2px solid #501B1D; 
     background: #FFF; 
     overflow: auto; 
   }
@@ -261,7 +296,7 @@ footer {
   
   .autocomplete-suggestions strong { 
     font-weight: normal; 
-    color: #3399FF; 
+    color: #64485C; 
   }
   
   .autocomplete-group { 
@@ -275,14 +310,14 @@ footer {
 
   /*Drinks Start*/
   .drinkCategories h1, .drinkGlasses h1, .drinkAlcoholic h1, .drinkRandomGenerator h2, .drinkIngredientList h1, .MealIngredientList h1, .MealRandomGenerator h2 {
-    color: #101357;
+    color: #2E1114;
     margin: 15px;
     font-size: 32px;
   }
 
   #drinkName, #MealTitle {
     font-size: 2rem;
-    color: #101357;
+    color: white;
   }
 
   #drinkRandomGenerator {
@@ -294,6 +329,6 @@ footer {
   }
 
   .drinkCategories, .drinkGlasses, .drinkAlcoholic, .drinkRandomGenerator, .drinkIngredientList, .MealIngredientList, .MealRandomGenerator {
-    border: solid 3px #101357;
+    border: solid 3px #501B1D;
   }
   /*Drinks End*/
