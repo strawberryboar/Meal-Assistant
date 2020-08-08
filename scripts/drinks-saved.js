@@ -5,7 +5,8 @@ const drinkDetails = document.getElementById("drinkDetails");
 function loadSavedDrinks () {
     let savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
 
-    if (savedDrinks === null || savedDrinks === [] || savedDrinks === "") {
+    // Updated IF statement to fix bug
+    if (savedDrinks === null || savedDrinks.length === 0) {
         $("#drinkErrorMsg").text ("You haven't added any drinks to your saved drink list. Start saving drinks to see the list.")
     } else {
         for (var i = 0; i < savedDrinks.length; i++) {

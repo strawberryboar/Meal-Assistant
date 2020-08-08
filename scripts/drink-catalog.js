@@ -136,3 +136,13 @@ $(document).on('click','#returnDrinkCatalog',function(){
     drReturn.classList.add("hidden");
     drCatalog.classList.remove("hidden");
 });
+
+//////////Newly Added/////////////////////////////
+$(document).on("click", ".drinkAlcohol", function(){
+    drCatalog.classList.add("hidden");
+    drReturn.classList.remove("hidden");
+    drSearchResults.classList.remove("hidden");
+    var drAlcohol = $(this).val();
+    var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=" + drAlcohol;
+    generateSearchResults(APIurl);
+});

@@ -64,36 +64,27 @@
         </div>
       </div>
   </nav>
+    <div class="container">
+      <div id="MealSearchresults"></div>
+      <div id="MealErrorMsg"></div>
+      <div id="MealDetails" class="hidden">
+          <button class="ReturnMealResults">Return to search results</button><br><br>
+          <h1 id="MealTitle"></h1>
+          <img id="MealIMG">
+          <h2 id="MealArea"></h2>
+          <h2 id="MealCategory"></h2>
+          Ingredients:
+          <ul id="IngredientList"></ul>
+          <p id="MealInstructions"></p>
+          <ul id="MealMeasurements"></ul>
+          <p id="MealSource"></p>
+          <p id="MealVideo"></p>
+          <!-- @Backend work on CSS style for these buttons, they look funny. -->
+          <button id="SaveMealBtn" class="SaveMealBtn">Save Meal</button>
+          <button id="RemoveMealBtn" class="RemoveMealBtn">Remove Meal From Saved Meals</button>
+      </div>
 
-  <!-- Please center search for to look like Drink search. -->
-    <div id="SearchForm">
-        Search By:
-        <select id="SearchSelect">
-            <option value="Name">Name</option>
-            <option value="MainIngredient">Main Ingredient</option>
-        </select><br><br>
-        <input type="text" id="MealSearchInput" placeholder="Search By Name">
-        <input type="text" id="MealIngredientSearchInput" placeholder="Search By Ingredient" class="hidden">
-        <button id="MealSearchBtn">Search</button><br><br>
-        <div id="MealErrorMsg"></div>
-        <div id="MealSearchresults"></div>
-    </div>
-    <div id="MealDetails" class="hidden">
-        <button class="ReturnMealResults">Return to search results</button><br><br>
-        <h1 id="MealTitle"></h1>
-        <img id="MealIMG">
-        <h2 id="MealArea"></h2>
-        <h2 id="MealCategory"></h2>
-        Ingredients:
-        <ul id="IngredientList"></ul>
-        <p id="MealInstructions"></p>
-        <ul id="MealMeasurements"></ul>
-        <p id="MealSource"></p>
-        <p id="MealVideo"></p>
-        <!-- @Backend work on CSS style for these buttons, they look funny. -->
-        <button id="SaveMealBtn" class="SaveMealBtn">Save Meal</button>
-        <button id="RemoveMealBtn" class="RemoveMealBtn">Remove Meal From Saved Meals</button>
-        <!-- //////////////////////////// -->
+
     </div>
     <footer>
       © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="">Charles Hall</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
@@ -101,7 +92,7 @@
 </body>
 <!-- Made all scripts async -->
 <script async src="scripts/meal-scripts.js"></script>
-<script async src="scripts/meal-search.js"></script>
+<script async src="scripts/meal-saved.js"></script>
 <!-- Added scripts nav -->
 <script async src="scripts/nav.js"></script>
 </html>
