@@ -16,7 +16,7 @@
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
             <!--put icon in this img-->
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <i class="fa fa-cutlery" aria-hidden="true"></i>
             <h1 class="title is-4" id="logo" >Meal Assistant</h1>
           </a>
       
@@ -93,7 +93,7 @@
             </div>
             <div class="MealIngredientList title"></div>
         </div>
-        <button id="ReturnMealCatalog" class="hidden subtitle">Return To Catalog</button>
+        <button id="ReturnMealCatalog" class="hidden subtitle is-small">Return To Catalog</button>
         <div id="MealSearchresults"></div>
         <div id="MealDetails" class="hidden">
             <button class="ReturnMealResults subtitle">Return to search results</button><br><br>
@@ -101,7 +101,7 @@
             <img id="MealIMG">
             <h2 id="MealArea"></h2>
             <h2 id="MealCategory"></h2>
-            Ingredients:
+            <u>Ingredients</u>
             <ul id="IngredientList"></ul>
             <p id="MealInstructions"></p>
             <ul id="MealMeasurements"></ul>
@@ -109,6 +109,9 @@
             <p id="MealVideo"></p>
         </div>
     </div>
+    <footer>
+        © Athena Petrovich | Charles Hall | Maynard Peralta | Vincent McGargill
+    </footer>
 </body>
 <script src="meal-scripts.js"></script>
 <script src="meal-catalog.js"></script>

@@ -61,8 +61,6 @@ function GenerateMealIngredients() {
         for (i = 0; i < response.meals.length; i++) {
             var ul = $("<ul>")
             var ingredient = $("<li>").text(response.meals[i].strIngredient);
-            //added subtitle class for ingredients
-            $(ingredient).addClass("subtitle");
             ul.append(ingredient);
             $(".MealIngredientList").append(ul);
         }
