@@ -104,6 +104,22 @@ $(document).on("click", ".drinkGlass", function(){
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=" + drGlass;
     generateSearchResults(APIurl);
 });
+
+//------Start New Code-------
+
+$(document).on("click", ".drinkAlcohol", function(){
+    drCatalog.classList.add("hidden");
+    drReturn.classList.remove("hidden");
+    drSearchResults.classList.remove("hidden");
+    var drAlcohol = $(this).val();
+    var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=" + drAlcohol;
+    generateSearchResults(APIurl);
+});
+
+//------End New Code------
+
+
+
 //event listener to select a random drink
 $(document).on('click', '#drinkRandomGenerator', function(){
     drCatalog.classList.add("hidden");
