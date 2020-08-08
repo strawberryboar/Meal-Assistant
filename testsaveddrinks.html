@@ -9,28 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="drinkSearch">
-        Search By:
-        <select id="searchSelect">
-            <option value="name">Name</option>
-            <option value="mainDrinkIngredient">Main Ingredient</option>
-        </select>
-        <br>
-        <input type="text" id="drinkInput" placeholder="Search By Name">
-        <input type="text" id="drinkIngredientInput" placeholder="Search By Ingredient" class="hidden">
-        <button id="drinkSearchBtn">Search</button>
-        <br>
-        <div id="drinkError"></div>
-        <div id="drinkSearchResults"></div>
-    </div>
+    <div id="drinkSearchResults"></div>
+    <div id="drinkErrorMsg"></div>
     <div id="drinkDetails" class="hidden">
         <button class="returnDrinkResults">Return to Search Results</button>
         <br>
-        <h1 id="drinkName"></h1>
+        <h1 id="drinkTitle"></h1>
         <img id="drinkIMG">
-        <h2 id="drinkCategory"></h2>
-        <h3 id="drinkGlass"></h3>
-        <h4 id="drinkAlcoholic"></h4>
         Ingredients:
         <ul id="drinkIngredientList"></ul>
         <p id="drinkInstructions"></p>
@@ -39,6 +24,6 @@
         <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink From Saved Drinks</button>
     </div>
 </body>
-    <script src="./drinksearch.js"></script>
+    <script src="./saveddrinks.js"></script>
     <script src="./drinkscripts.js"></script>
 </html>

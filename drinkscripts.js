@@ -1,4 +1,6 @@
 var drinkString;
+const saveDrinkBtn = document.getElementById("saveDrinkBtn")
+const removeDrinkBtn = document.getElementById("removeDrinkBtn")
 
 function generateSearchResults(APIurl) {
     let drinkSearchResults = $("#drinkSearchResults");
@@ -59,5 +61,48 @@ function generateDrinkDetails(APIurl) {
             }
         }
         $("#drinkInstructions").text(drinkObject.strInstructions);
-    })
+        var drinkID = drinkObject.idDrink;
+        $("#saveDrinkBtn").val(drinkID);
+        $("#removeDrinkBtn").val(drinkID);
+        var savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
+        if (savedDrinks === null) {
+            removeDrinkBtn.classList.add("hidden");
+            saveDrinkBtn.classList.remove("hidden");
+        } else if (savedDrinks.includes(drinkID)) {
+            saveDrinkBtn.classList.add("hidden");
+            removeDrinkBtn.classList.remove("hidden");
+        } else {
+            removeDrinkBtn.classList.add("hidden");
+            saveDrinkBtn.classList.remove("hidden");
+        }
+    });
 }
+
+$(document).on("click", "#saveDrinkBtn", function(){
+    var drinkID = $(this).val();
+    var savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
+    if (savedDrinks === null) {
+        var newDrinkArray = new Array();
+        newDrinkArray.push(drinkID);
+        localStorage.setItem("savedDrinks", JSON.stringify(newDrinkArray));
+    } else {
+        savedDrinks.push(drinkID);
+        localStorage.setItem("savedDrinks", JSON.stringify(savedDrinks));
+    }
+    console.log(localStorage.getItem("savedDrinks"));
+    var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID;
+    $("#drinkIngredientList").html("");
+    generateDrinkDetails(APIurl);
+});
+
+$(document).on("click", "#removeDrinkBtn", function () {
+    var drinkID  = $(this).val();
+    var savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
+    var drinkIndex = savedDrinks.indexOf(drinkID);
+    savedDrinks.splice(drinkIndex, 1);
+    localStorage.setItem("savedDrinks", JSON.stringify(savedDrinks));
+    var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID;
+    $("#drinkIngredientList").html("");
+    generateDrinkDetails(APIurl);
+    console.log(localStorage.getItem("savedDrinks"));
+});
