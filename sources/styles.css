@@ -34,6 +34,9 @@ a.navbar-item:hover {
   color: white;
 }
 
+.navbar-burger {
+  color: #6e1417;
+}
 
 #IMGLogo {
   background-color: white;
@@ -191,11 +194,11 @@ h2, u, #drinkSearchResults h1 {
   font-size: 30px;
 }
 
-footer a {
+footer a, #MealSource a, #MealVideo a {
   color: white;
 }
 
-footer a:hover {
+footer a:hover, #MealSource a:hover, #MealVideo a:hover {
   color: #db9e67;
 }
 
