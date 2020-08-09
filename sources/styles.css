@@ -29,10 +29,11 @@ html {
   color: white;
 }
 
-.navbar-item:hover {
+a.navbar-item:hover {
   background-color: #a34033;
   color: white;
 }
+
 
 #IMGLogo {
   background-color: white;
@@ -53,6 +54,13 @@ html {
   text-align: center;
   font-size: 30px;
   color: #6e1417;
+}
+
+#MealErrorMsg, #drinkErrorMsg {
+  font-size: 20px;
+  color: #6e1417;
+  text-align: center;
+  margin: 20px;
 }
 
 #mainTitle, p{
@@ -183,6 +191,13 @@ h2, u, #drinkSearchResults h1 {
   font-size: 30px;
 }
 
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #db9e67;
+}
 
 #MealInstructions, #IngredientList, #drinkIngredientList, #drinkInstructions {
   color: #6e1417;
@@ -193,12 +208,8 @@ h2, u, #drinkSearchResults h1 {
   border-color: #6e1417;
 }
 
-a, #MealSearchresults p {
+ #MealSearchresults p {
   color: white;
-}
-
-a:hover {
-  color: #fea49f;
 }
 
 #ReturnMealCatalog, .ReturnMealResults, #returnDrinkCatalog, #MealRandomGenerator, .returnDrinkResults, #saveDrinkBtn, #SaveMealBtn, #RemoveMealBtn, #removeDrinkBtn, #MealSearchBtn, #drinkSearchBtn {
