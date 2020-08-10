@@ -60,7 +60,6 @@ function generateDrinkAlcohol() {
     });
 }
 
-
 function generateDrinkIngredients() {
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list";
 
