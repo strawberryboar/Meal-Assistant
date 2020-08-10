@@ -2,7 +2,6 @@ var drinkString;
 const saveDrinkBtn = document.getElementById("saveDrinkBtn")
 const removeDrinkBtn = document.getElementById("removeDrinkBtn")
 
-//function to show results of a search
 function generateSearchResults(APIurl) {
     let drinkSearchResults = $("#drinkSearchResults");
     drinkSearchResults.html("");
@@ -17,7 +16,6 @@ function generateSearchResults(APIurl) {
             errorMsg.css("color", "red");
             errorMsg.text("Error: No search results found for " + drinkString + ". Please try again");
         }else{
-            console.log(response)
             for (k=0; k < response.drinks.length; k++) {
                 let drinkObject = response.drinks[k];
                 let resultsDiv = $("<div>");
@@ -40,13 +38,12 @@ function generateSearchResults(APIurl) {
         }
     });
 }
-//function to show drink details including picture, ingredients, measurements, and instructions
+
 function generateDrinkDetails(APIurl) {
     $.ajax({
         url: APIurl,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         let drinkObject = response.drinks[0];
         $("#drinkName").text(drinkObject.strDrink);
         $("#drinkIMG").attr("src", drinkObject.strDrinkThumb);
@@ -79,7 +76,7 @@ function generateDrinkDetails(APIurl) {
         }
     });
 }
-//Event listeners to add or remove drink to saved list.
+
 $(document).on("click", "#saveDrinkBtn", function(){
     var drinkID = $(this).val();
     var savedDrinks = JSON.parse(localStorage.getItem("savedDrinks"));
@@ -91,7 +88,6 @@ $(document).on("click", "#saveDrinkBtn", function(){
         savedDrinks.push(drinkID);
         localStorage.setItem("savedDrinks", JSON.stringify(savedDrinks));
     }
-    console.log(localStorage.getItem("savedDrinks"));
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID;
     $("#drinkIngredientList").html("");
     generateDrinkDetails(APIurl);
@@ -106,5 +102,4 @@ $(document).on("click", "#removeDrinkBtn", function () {
     var APIurl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID;
     $("#drinkIngredientList").html("");
     generateDrinkDetails(APIurl);
-    console.log(localStorage.getItem("savedDrinks"));
 });

@@ -3,8 +3,6 @@ const MealDetails = document.getElementById("MealDetails");
 let MealSearchArray = new Array();
 let MealSearchIngredientArray = new Array();
 
-
-// Load Search Results
 $(document).ready(function(){
     function LoadMealSuggestions() {
         const ABC = "abcdefghijklmnopqrstuvwxyz";
@@ -30,7 +28,6 @@ $(document).ready(function(){
             url: "https://www.themealdb.com/api/json/v1/1/list.php?i=list",
             method: 'GET'
         }).then(function(response) {
-            console.log(response)
     
             for (i = 0; i < response.meals.length; i++) {
                 var ingredient = response.meals[i].strIngredient;
@@ -46,7 +43,6 @@ $(document).ready(function(){
     LoadMealSuggestions()
 });
 
-// Meal Search Button
 $(document).on('click','#MealSearchBtn',function(){
     var SearchSelect = $("#SearchSelect").val();
     if (SearchSelect === "Name") {
@@ -61,7 +57,6 @@ $(document).on('click','#MealSearchBtn',function(){
     GenerateSearchResults(url)
 });
 
-// Meal Search Results click Event
 $(document).on('click','.MealSearchResult',function(){
     var id = $(this).attr('id');
     var APIurl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id
@@ -70,7 +65,6 @@ $(document).on('click','.MealSearchResult',function(){
     MealDetails.classList.remove("hidden");
 });
 
-// Shows meal Results
 $(document).on('click','.ReturnMealResults',function(){
     SearchForm.classList.remove("hidden");
     MealDetails.classList.add("hidden");

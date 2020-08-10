@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-        <link rel="stylesheet" href="sources/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Nanum+Gothic&family=Nunito:wght@300&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.min.js"></script>
-        <title>Meal Assistant</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="sources/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Nanum+Gothic&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.27/jquery.autocomplete.min.js"></script>
+    <title>Meal Assistant</title>
+</head>
 <body>
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -78,33 +78,19 @@
     </div>
   </nav>
 
-  <h1 class="title" id="SavedTitle">Saved Drinks</h1>
     <div class="container">
-        <div id="drinkSearchResults"></div>
-        <div id="drinkErrorMsg"></div>
-        <div id="drinkDetails" class="hidden">
-            <button class="returnDrinkResults">Return to Saved Drinks</button>
-            <br>
-            <h1 id="drinkName"></h1>
-            <img id="drinkIMG">
-            <h2 id="drinkCategory"></h2>
-            <h3 id="drinkGlass"></h3>
-            <h4 id="drinkAlcoholic"></h4>
-            <u>Ingredients:</u>
-            <ul id="drinkIngredientList"></ul>
-            <p id="drinkInstructions"></p>
-            <ul id="drinkMeasurements"></ul>
-            <button id="saveDrinkBtn" class="saveDrinkBtn">Save Drink</button>
-            <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink from Saved Drinks</button>
-        </div>
+      <div id="drinkCatalog">
+        <div class="drinkIngredientList"></div>
+      </div>
     </div>
-    
+
   <footer>
       © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
   </footer>
-
+    
 </body>
 <script async src="scripts/drink-scripts.js"></script>
-<script async src="scripts/drinks-saved.js"></script>
+<script async src="scripts/drink-catalog.js"></script>
+<script async src="scripts/drink-ingredients.js"></script>
 <script async src="scripts/nav.js"></script>
 </html>

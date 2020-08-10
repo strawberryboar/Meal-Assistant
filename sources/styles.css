@@ -13,18 +13,21 @@ html {
 }
 
 .container {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  margin: 5%;
+}
+
+.mainPage, .searchCont {
+  background-color: #f0e8dd;
+  border-style: solid;
+  border-color: #6e1417;
+  border-width: 3px;
 }
 
 .hidden {
     display: none;
 }
 
-.navbar, .navbar-item, #logo {
+.navbar, .navbar-item, #logo, .navbar-link, .navbar-dropdown {
   background-color: #6e1417;
   color: white;
 }
@@ -35,7 +38,7 @@ a.navbar-item:hover {
 }
 
 .navbar-burger {
-  color: #6e1417;
+  color: white;
 }
 
 #IMGLogo {
@@ -44,19 +47,14 @@ a.navbar-item:hover {
   border-radius: 20px;
 }
 
-/*Main Page Start*/
-.mainPage, .searchCont {
-  background-color: #f0e8dd;
-  border-style: solid;
-  border-color: #6e1417;
-  border-width: 3px;
-  margin: 15px;
-}
-
 #searchTitle {
   text-align: center;
   font-size: 30px;
   color: #6e1417;
+}
+
+#SavedTitle {
+  text-align: center;
 }
 
 #MealErrorMsg, #drinkErrorMsg {
@@ -66,7 +64,7 @@ a.navbar-item:hover {
   margin: 20px;
 }
 
-#mainTitle, p{
+#mainTitle, p {
   text-align: center;
   margin: 18px;
   padding: 18px;
@@ -100,7 +98,6 @@ p {
     margin: auto;
     margin-bottom: 20px;
 }
-/*Main Page End*/
 
 .MealIngredientList li {
   font-size: 20px;
@@ -121,7 +118,7 @@ p {
   border-width: 3px;
   color: white;
 }
-/*Meal Search Start*/
+
 #MealSearchBtn, .ReturnMealResults, #SaveMealBtn, #saveDrinkBtn, #RemoveMealBtn, #removeDrinkBtn, #drinkSearchBtn {
   background-color: #6e1417;
   border-color: #6e1417;
@@ -132,18 +129,28 @@ p {
 #SearchForm, #drinkSearch {
   color: #a34033;
 }
-/*Meal Search End*/
 
-.searchCont, .MealSearchResult, .MealCategories, .MealAreas, .MealRandomGenerator, .MealIngredientList, #MealDetails,/**/ .drinkSearchResult, .drinkCategories, .drinkAreas, .drinkRandomGenerator, .drinkIngredientList, .drinkGlasses, .drinkAlcoholic, #drinkDetails {
+.MealCategories, .MealAreas, .MealRandomGenerator, 
+.MealIngredientList, #MealDetails, .drinkSearchResult, 
+.drinkCategories, .drinkAreas, .drinkRandomGenerator, 
+.drinkIngredientList, .drinkGlasses, .drinkAlcoholic, #drinkDetails {
     border-style: solid;
     border-width: 3px;
     border-color: #6e1417;
     width: 100%;
     padding: 20px;
-    margin: 20px;
-    margin-bottom: 15px;
     background-color: #f0e8dd;
     color: white;
+}
+
+.MealSearchResult, .drinkSearchResult {
+  width: 95%;
+  padding: 20px;
+  margin: 3%;
+  text-align: center;
+  border-style: solid;
+  border-color: #6e1417;
+  border-radius: 10px;
 }
 
 .Areas-Buttons {
@@ -215,13 +222,15 @@ footer a:hover, #MealSource a:hover, #MealVideo a:hover {
   color: white;
 }
 
-#ReturnMealCatalog, .ReturnMealResults, #returnDrinkCatalog, #MealRandomGenerator, .returnDrinkResults, #saveDrinkBtn, #SaveMealBtn, #RemoveMealBtn, #removeDrinkBtn, #MealSearchBtn, #drinkSearchBtn {
+#ReturnMealCatalog, .ReturnMealResults, #returnDrinkCatalog, 
+#MealRandomGenerator, .returnDrinkResults, #saveDrinkBtn, 
+#SaveMealBtn, #RemoveMealBtn, #removeDrinkBtn, #MealSearchBtn, #drinkSearchBtn {
   margin-top: 5px;
   border-style: solid;
   border-color: #6e1417;
   border-radius: 10px;
-  overflow: auto;
-  height: 30px;
+  /* height: 30px; */
+  height: 100%;
   color: white;
   font-size: 1.25rem;
   background-color: #6e1417;
@@ -232,17 +241,6 @@ footer a:hover, #MealSource a:hover, #MealVideo a:hover {
   border-color: #6e1417;
   border-radius: 3px;
 }
-
-.MealSearchResult, .drinkSearchResult {
-  width: 75%;
-  margin-left: 10%;
-  margin-right: 10;
-  text-align: center;
-  border-style: solid;
-  border-color: #6e1417;
-  border-radius: 10px;
-}
-
 
 .MealArea {
   padding: 0;
@@ -272,7 +270,14 @@ footer a:hover, #MealSource a:hover, #MealVideo a:hover {
 }
 
 
-.navbar-item:hover, .MealSearchResult:hover, .MealCategory:hover, .Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, #MealSearchBtn:hover, .ReturnMealResults:hover, #ReturnMealCatalog:hover, #MealRandomGenerator:hover, #RemoveMealBtn:hover, .RemoveMealBtn:hover, #removeDrinkBtn:hover, .drinkSearchResult:hover, .drinkCategory:hover, .drinkGlass:hover, .drinkAlcohol:hover, #SaveMealBtn:hover, #drinkRandomGenerator:hover, .drinkSearchResult:hover, #returnDrinkCatalog:hover, .returnDrinkResults:hover, #saveDrinkBtn:hover, #drinkSearchBtn:hover {
+.navbar-item:hover, .MealSearchResult:hover, .MealCategory:hover, 
+.Areas-Buttons:hover, .subtitle:hover, .Areas-Buttons:hover, 
+#MealSearchBtn:hover, .ReturnMealResults:hover, #ReturnMealCatalog:hover, 
+#MealRandomGenerator:hover, #RemoveMealBtn:hover, .RemoveMealBtn:hover, 
+#removeDrinkBtn:hover, .drinkSearchResult:hover, .drinkCategory:hover, 
+.drinkGlass:hover, .drinkAlcohol:hover, #SaveMealBtn:hover, 
+#drinkRandomGenerator:hover, .drinkSearchResult:hover, #returnDrinkCatalog:hover, 
+.returnDrinkResults:hover, #saveDrinkBtn:hover, #drinkSearchBtn:hover {
     background-color: #b86146;
     color: white;
 }
@@ -288,9 +293,6 @@ footer {
     left: 0;
     margin-top: 20px;
 }
-
-
-
 
 .autocomplete-suggestions { 
     border: 2px solid #501B1D; 
@@ -345,4 +347,3 @@ footer {
   .drinkCategories, .drinkGlasses, .drinkAlcoholic, .drinkRandomGenerator, .drinkIngredientList, .MealIngredientList, .MealRandomGenerator {
     border: solid 3px #a34033;
   }
-  /*Drinks End*/

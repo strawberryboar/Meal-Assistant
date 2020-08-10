@@ -12,12 +12,9 @@
     </head>
 <body>
 
-    <!--Navbar Start-->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <!-- Added href link to index for icon and title on navbar -->
-        <a class="navbar-item" href="index.html">
-          <!--put icon in this img-->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
           <img id="IMGLogo" src="sources/icon.png" width="30" height="60">
           <h1 class="title is-4" id="logo" >Meal Assistant</h1>
         </a>
@@ -25,50 +22,68 @@
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
+          <br><br>Menu<br><br>
         </a>
-      </div>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="index.html">
-            Home
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          Home
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Meals
           </a>
-          <a class="navbar-item" href="meal-catalog.html">
-            Meal Catalog
-          </a>
-
-          <a class="navbar-item" href="drink-catalog.html">
-            Drink Catalog
-          </a>
-    
-          <a class="navbar-item" href="meal-search.html">
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="meal-catalog.html">
+              Meal Catalog
+            </a>
+            <a class="navbar-item" href="meal-search.html">
               Meal Search
+            </a>
+            <a class="navbar-item" href="saved-meals.html">
+              Saved Meals
+            </a>
+            <a class="navbar-item" href="meal-ingredients.html">
+              Meal Ingredients
+            </a>
+            <a class="navbar-item" href="meal-random.html">
+              Random Meal
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Drinks
           </a>
-
-          <a class="navbar-item" href="drink-search.html">
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="drink-catalog.html">
+              Drink Catalog
+            </a>
+            <a class="navbar-item" href="drink-search.html">
               Drink Search
-          </a>
-
-          <!-- Added additional nav bars -->
-          <a class="navbar-item" href="saved-meals.html">
-            Saved Meals
-          </a>
-
-          <a class="navbar-item" href="saved-drinks.html">
+            </a>
+            <a class="navbar-item" href="saved-drinks.html">
               Saved Drinks
             </a>
-            <!-- ///////////////////////// -->
-            </div>
-          </div>
-        </div>
+            <a class="navbar-item" href="drink-ingredients.html">
+              Drink Ingredients
+            </a>
+            <a class="navbar-item" href="drink-random.html">
+              Random Drink
+            </a>
           </div>
         </div>
       </div>
+    </div>
   </nav>
+
+  <h1 class="title" id="SavedTitle">Saved Meals</h1>
     <div class="container">
       <div id="MealSearchresults"></div>
       <div id="MealErrorMsg"></div>
       <div id="MealDetails" class="hidden">
-          <button class="ReturnMealResults">Return to search results</button><br><br>
+          <button class="ReturnMealResults">Return to Saved Meals</button><br><br>
           <h1 id="MealTitle"></h1>
           <img id="MealIMG">
           <h2 id="MealArea"></h2>
@@ -79,20 +94,17 @@
           <ul id="MealMeasurements"></ul>
           <p id="MealSource"></p>
           <p id="MealVideo"></p>
-          <!-- @Backend work on CSS style for these buttons, they look funny. -->
           <button id="SaveMealBtn" class="SaveMealBtn">Save Meal</button>
-          <button id="RemoveMealBtn" class="RemoveMealBtn">Remove Meal From Saved Meals</button>
+          <button id="RemoveMealBtn" class="RemoveMealBtn">Remove Meal from Saved Meals</button>
       </div>
-
-
     </div>
-    <footer>
-      © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="">Charles Hall</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
+
+  <footer>
+      © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
   </footer>
+
 </body>
-<!-- Made all scripts async -->
 <script async src="scripts/meal-scripts.js"></script>
 <script async src="scripts/meal-saved.js"></script>
-<!-- Added scripts nav -->
 <script async src="scripts/nav.js"></script>
 </html>

@@ -50,31 +50,6 @@ function GenerateMealAreas() {
     });
 }
 
-function GenerateMealIngredients() {
-    var APIurl = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
-
-    $.ajax({
-        url: APIurl,
-        method: 'GET'
-    }).then(function(response) {
-        $(".MealIngredientList").append($("<h1>").text("Ingredients List:"));
-        for (i = 0; i < response.meals.length; i++) {
-            var ul = $("<ul>")
-            var ingredient = $("<li>").text(response.meals[i].strIngredient);
-            ul.append(ingredient);
-            $(".MealIngredientList").append(ul);
-        }
-
-    });
-}
-
-
-$(document).ready(function(){
-    GenerateMealCatagories();
-    GenerateMealAreas();
-    GenerateMealIngredients();
-});
-
 $(document).on('click','.MealCategory',function(){
     MealCatalog.classList.add("hidden");
     ReturnMealCatalog.classList.remove("hidden");
@@ -111,7 +86,6 @@ $(document).on('click','.ReturnMealResults',function(){
     $("#IngredientList").html("");
 });
 
-// Meal Search Results click Event
 $(document).on('click','.MealSearchResult',function(){
     var id = $(this).attr('id');
     var APIurl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
@@ -121,7 +95,6 @@ $(document).on('click','.MealSearchResult',function(){
     MealDetails.classList.remove("hidden");
 });
 
-// Shows meal Results
 $(document).on('click','#ReturnMealCatalog',function(){
     MealDetails.classList.add("hidden");
     MealSearchresults.classList.add("hidden");

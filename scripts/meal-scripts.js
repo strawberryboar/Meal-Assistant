@@ -1,6 +1,5 @@
 var MealString;
 
-// Generate Search Results Using a URL
 function GenerateSearchResults(APIurl) {
     var searchresults = $("#MealSearchresults")
     searchresults.html("");
@@ -11,7 +10,6 @@ function GenerateSearchResults(APIurl) {
         url: APIurl,
         method: 'GET'
     }).then(function(response) {
-        console.log(response)
         if (response.meals === null) {
             
             ErrorMsg.css("color", "red");
@@ -41,7 +39,6 @@ function GenerateSearchResults(APIurl) {
     });
 }
 
-// Generate Specific Food Details Using A URL
 function GenerateMealDetails(APIurl) {
     $.ajax({
         url: APIurl,
@@ -99,8 +96,24 @@ function GenerateMealDetails(APIurl) {
     });
 }
 
-////////// New Additions as of 8/6/2020 ////////// 
-// Save Meal Button Event Click Listener
+function GenerateMealIngredients() {
+    var APIurl = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
+
+    $.ajax({
+        url: APIurl,
+        method: 'GET'
+    }).then(function(response) {
+        $(".MealIngredientList").append($("<h1>").text("Ingredients List:"));
+        for (i = 0; i < response.meals.length; i++) {
+            var ul = $("<ul>")
+            var ingredient = $("<li>").text(response.meals[i].strIngredient);
+            ul.append(ingredient);
+            $(".MealIngredientList").append(ul);
+        }
+
+    });
+}
+
 $(document).on('click','#SaveMealBtn',function(){
     var MealID = $(this).val();
     var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
@@ -112,7 +125,6 @@ $(document).on('click','#SaveMealBtn',function(){
         SavedMeals.push(MealID);
         localStorage.setItem("SavedMeals", JSON.stringify(SavedMeals));
     }
-    console.log(localStorage.getItem("SavedMeals"));
     var APIurl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + MealID;
     $("#MealSource").html("");
     $("#MealVideo").html("");
@@ -120,7 +132,6 @@ $(document).on('click','#SaveMealBtn',function(){
     GenerateMealDetails(APIurl)
 });
 
-// Remove Meal Button From Saved Click Listener
 $(document).on('click','#RemoveMealBtn',function(){
     var MealID = $(this).val();
     var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
@@ -132,6 +143,4 @@ $(document).on('click','#RemoveMealBtn',function(){
     $("#MealVideo").html("");
     $("#IngredientList").html("");
     GenerateMealDetails(APIurl);
-    console.log(localStorage.getItem("SavedMeals"));
 });
-////////////////////////////////////////////////////

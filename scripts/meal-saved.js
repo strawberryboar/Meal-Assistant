@@ -1,7 +1,6 @@
 const MealSearchresults = document.getElementById("MealSearchresults");
 const MealDetails = document.getElementById("MealDetails");
 
-// Loads Saved Meals
 function LoadSavedMeals() {
     var SavedMeals = JSON.parse(localStorage.getItem("SavedMeals"));
 
@@ -17,7 +16,6 @@ function LoadSavedMeals() {
                 url: APIurl,
                 method: 'GET'
             }).then(function(response) { 
-                console.log(response.meals[0])
                 var MealObject = response.meals[0];
                 var ResultDiv = $("<div>");
                 ResultDiv.attr("id", MealObject.idMeal);
@@ -43,7 +41,6 @@ function LoadSavedMeals() {
 
 LoadSavedMeals()
 
-// Meal Search Results click Event
 $(document).on('click','.MealSearchResult',function(){
     var id = $(this).attr('id');
     var APIurl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id
@@ -52,7 +49,6 @@ $(document).on('click','.MealSearchResult',function(){
     MealDetails.classList.remove("hidden");
 });
 
-// Shows meal Results
 $(document).on('click','.ReturnMealResults',function(){
     MealSearchresults.classList.remove("hidden");
     MealDetails.classList.add("hidden");

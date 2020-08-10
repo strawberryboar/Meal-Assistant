@@ -12,61 +12,75 @@
     </head>
 <body>
 
-    <!--Navbar Start-->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <!-- Added href link to index for icon and title on navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+          <img id="IMGLogo" src="sources/icon.png" width="30" height="60">
+          <h1 class="title is-4" id="logo" >Meal Assistant</h1>
+        </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <br><br>Menu<br><br>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
         <a class="navbar-item" href="index.html">
-            <!--put icon in this img-->
-            <img id="IMGLogo" src="sources/icon.png" width="30" height="60">
-            <h1 class="title is-4" id="logo" >Meal Assistant</h1>
+          Home
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Meals
           </a>
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
-              Home
-            </a>
+          <div class="navbar-dropdown">
             <a class="navbar-item" href="meal-catalog.html">
               Meal Catalog
             </a>
-
-            <a class="navbar-item" href="drink-catalog.html">
-              Drink Catalog
-            </a>
-      
             <a class="navbar-item" href="meal-search.html">
-                Meal Search
+              Meal Search
             </a>
-
-            <a class="navbar-item" href="drink-search.html">
-                Drink Search
-            </a>
-
             <a class="navbar-item" href="saved-meals.html">
               Saved Meals
             </a>
-
-            <a class="navbar-item" href="saved-drinks.html">
-                Saved Drinks
-              </a>
-              <!-- ///////////////////////// -->
-              </div>
-            </div>
-          </div>
-            </div>
+            <a class="navbar-item" href="meal-ingredients.html">
+              Meal Ingredients
+            </a>
+            <a class="navbar-item" href="meal-random.html">
+              Random Meal
+            </a>
           </div>
         </div>
-    </nav>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Drinks
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="drink-catalog.html">
+              Drink Catalog
+            </a>
+            <a class="navbar-item" href="drink-search.html">
+              Drink Search
+            </a>
+            <a class="navbar-item" href="saved-drinks.html">
+              Saved Drinks
+            </a>
+            <a class="navbar-item" href="drink-ingredients.html">
+              Drink Ingredients
+            </a>
+            <a class="navbar-item" href="drink-random.html">
+              Random Drink
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 
     <div class="container searchCont">
-      <p id="searchTitle">What are you looking for? Search by name or ingredient.</p>
-        <div id="drinkSearch">
+      <div id="drinkSearch">
+        <p id="searchTitle">What are you looking for? Search by name or ingredient.</p>
             Search By:
             <select id="searchSelect">
                 <option value="name">Name</option>
@@ -93,17 +107,16 @@
             <p id="drinkInstructions"></p>
             <ul id="drinkMeasurements"></ul>
             <button id="saveDrinkBtn" class="saveDrinkBtn">Save Drink</button>
-            <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink From Saved Drinks</button>
+            <button id="removeDrinkBtn" class="removeDrinkBtn">Remove Drink from Saved Drinks</button>
         </div>
     </div>
     
-    <footer>
-      © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="">Charles Hall</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
+  <footer>
+      © <a href="https://github.com/strawberryboar">Athena Petrovich</a> | <a href="https://github.com/maynperalta">Maynard Peralta</a> | <a href="https://github.com/vmcgargill">Vincent McGargill</a>
   </footer>
+
 </body>
-<!-- Made all scripts async -->
 <script async src="scripts/drink-scripts.js"></script>
 <script async src="scripts/drink-search.js"></script>
-<!-- Added scripts nav -->
 <script async src="scripts/nav.js"></script>
 </html>
