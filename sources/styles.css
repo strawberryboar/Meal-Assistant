@@ -119,6 +119,12 @@ p {
   color: white;
 }
 
+.MealCategory, .drinkCategory, .drinkGlass, .drinkAlcohol {
+  margin: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
 #MealSearchBtn, .ReturnMealResults, #SaveMealBtn, #saveDrinkBtn, #RemoveMealBtn, #removeDrinkBtn, #drinkSearchBtn {
   background-color: #6e1417;
   border-color: #6e1417;
@@ -164,11 +170,7 @@ p {
 
 }
 
-.MealCategory, .drinkCategory, .drinkGlass, .drinkAlcohol {
-  margin: 20px;
-  padding: 20px;
-  margin-bottom: 15px;
-}
+
 
 .MealCategory h2, .drinkCategory h2, .drinkGlass h2, .drinkAlcohol {
   color: white;
@@ -251,7 +253,9 @@ footer a:hover, #MealSource a:hover, #MealVideo a:hover {
 }
 
 
-.MealCategory, .Areas-Buttons, button, .MealSearchResult, .drinkCategory, .drinkGlass, .drinkAlcohol, .drinkSearchResult {
+.MealCategory, .Areas-Buttons, button, 
+.MealSearchResult, .drinkCategory, .drinkGlass, 
+.drinkAlcohol, .drinkSearchResult {
   background-color: #a34033;
 }
 
