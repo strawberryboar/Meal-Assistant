@@ -67,4 +67,4 @@ The random meal and drink pages simply calls to the API for a completely random 
 
 The Meal Assistant would be useful for restaurants and bars to use in case they want to add new menu items based on name, ingredients used, the type of dish, the type of glass drink, etc. This would be ideal for restaurant businesses to use if they have to start adding new drinks or dishes to the menu.
 
-![meal assistant](./Sources/Meal-Assistant.gif)
+![meal assistant](./sources/Meal-Assistant.gif)
