@@ -287,15 +287,17 @@ footer a:hover, #MealSource a:hover, #MealVideo a:hover {
 }
 
 footer {
-  margin: auto;
+  /* margin: auto; */
   /* position: fixed; */
     text-align: center;
     width: 100%;
     background-color:#6e1417;
     color: white;
-    bottom: 0;
-    left: 0;
-    margin-top: 20px;
+    position: absolute;
+  bottom: 0;
+    /* bottom: 0; */
+    /* left: 0; */
+    /* margin-top: 20px; */
 }
 
 .autocomplete-suggestions { 
