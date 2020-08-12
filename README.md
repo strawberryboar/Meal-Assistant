@@ -6,7 +6,7 @@ Contributors: Athena Petrovich (strawberryboar), Maynard Peralta (maynperalta), 
 
 ## Overall Scope
 
-The Meal Assistant is an app that allows users to search for both food and drink recpies by name/title, search for recipes by ingredient, browse various recipes via a catalog, and save various meal recipes and cocktail drink recipes. This application can even generate random recipes if they are not sure what they want.
+The Meal Assistant is an app that allows users to search for both food and drink recipes by name/title, search for recipes by ingredient, browse various recipes via a catalog, and save various meal recipes and cocktail drink recipes. This application can even generate random recipes if they are not sure what they want.
 
 ## User Story
 
@@ -49,7 +49,7 @@ The Meal Catalog and Drink Catalog pages let the user browse a catalog of all me
 
 ## Meal Search & Drink Search
 
-The search pages allow the user to search for either meal/drink name or ingredient. The search input also features a jQuery autocomplete function that generates a list of meal/drink names or ingredient suggestions. For the meal/drink names, the AJAX call runs through a loop 26 times from letters A-Z because the only way to get all the names from the API is by looping through the search by letter API call by every letter, then getting all of the names, then adding those names to the search by name array, then inputting those names in the autocomplete function for the HTML search input. The ingredient autocomplete function has the same process but it is easier and faster because the database has an API call where you can call for all the the ingredeint titles. There is no API call that just calls by meal/drink title. Once the user searches for something such as "Beef" then it will display all results that have the name beef in it's title. If the user selects one of the divs, then it will display that meal detail using the meal ID stored in that element to identify which meal from the database is on display.
+The search pages allow the user to search for either meal/drink name or ingredient. The search input also features a jQuery autocomplete function that generates a list of meal/drink names or ingredient suggestions. For the meal/drink names, the AJAX call runs through a loop 26 times from letters A-Z because the only way to get all the names from the API is by looping through the search by letter API call by every letter, then getting all of the names, then adding those names to the search by name array, then inputting those names in the autocomplete function for the HTML search input. The ingredient autocomplete function has the same process but it is easier and faster because the database has an API call where you can call for all the the ingredient titles. There is no API call that just calls by meal/drink title. Once the user searches for something such as "Beef" then it will display all results that have the name beef in it's title. If the user selects one of the divs, then it will display that meal detail using the meal ID stored in that element to identify which meal from the database is on display.
 
 ## Saved Meals & Drinks
 
@@ -57,7 +57,7 @@ The saved meals and drinks page allows the user to load all of their saved objec
 
 ## Meal & Drink Ingredients
 
-The ingredient pages simply loads and displays to the user all of the ingredeints that are currently on the database using an API call with AJAX. We would have added a feature where the user can click on an ingredient and it will display all of the meals/drinks with that ingredient. But that is what the search pages are for. Plus, not all of the ingredeints on the databases are used on the free versions of the Meal and Cocktail DB APIs. So some of those ingredeints would return no results.
+The ingredient pages simply loads and displays to the user all of the ingredients that are currently on the database using an API call with AJAX. We would have added a feature where the user can click on an ingredient and it will display all of the meals/drinks with that ingredient. But that is what the search pages are for. Plus, not all of the ingredients on the databases are used on the free versions of the Meal and Cocktail DB APIs. So some of those ingredients would return no results.
 
 ## Random Meal & Drinks
 
